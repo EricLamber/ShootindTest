@@ -23,6 +23,6 @@ public class PlayerShooting : MonoBehaviour
     {
         Rigidbody arrow = Instantiate(m_Arrow, m_ArrowShootSpot.transform.position, m_ArrowShootSpot.transform.rotation);
         arrow.AddForce(transform.forward * m_ShootStrength, ForceMode.Impulse);
-        Destroy(arrow, 5);
+        Destroy(arrow.gameObject, 5);
     }
 }
